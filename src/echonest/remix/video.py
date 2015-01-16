@@ -301,7 +301,6 @@ def sequencefrommov(mov, settings=None, direc=None, pre="frame-", verbose=True):
     format = "jpeg"
     if settings is not None:
         format = settings.imageformat()
-    //cmd = "en-ffmpeg -i " + mov + " -an -sameq " + os.path.join(direc, pre + "%06d." + format)
     cmd = "en-ffmpeg -i " + mov + " -an -qscale 0 " + os.path.join(direc, pre + "%06d." + format)
     if verbose:
         log.info(cmd)
