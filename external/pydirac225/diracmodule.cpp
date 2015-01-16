@@ -158,14 +158,14 @@ static PyObject *Dirac_timeScale(PyObject *self, PyObject *args)
         {
             if (time_scale(outSamples, (double)numOutSamples/sampleRate, inSamples, (double)numInSamples/sampleRate, numInChannels, (float)sampleRate, quality) < 0)
             {
-                PyErr_Format(DiracError, "problem with time_scale.");
+//                PyErr_Format(DiracError, "problem with time_scale.");
                 return NULL;
             }
         }
     }
     catch (std::runtime_error &error)
     {
-        PyErr_Format(PyExc_RuntimeError, error.what());
+//        PyErr_Format(PyExc_RuntimeError, error.what());
         return NULL;
     }
 
